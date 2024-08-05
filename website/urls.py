@@ -1,7 +1,8 @@
 from django.urls import path,include
-from website.views import response
+from website.views import index_view,about_view,contact_view
 
 urlpatterns = [
-    path('server_test', response),
-    path('home/',include('home.urls'))
+    path('', index_view),
+    path('about', about_view),
+    path('contact', contact_view),
 ]
